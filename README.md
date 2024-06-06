@@ -38,4 +38,5 @@ Usage
 - Mark a task as completed by clicking the status icon.
 
 Contributing
+
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
