@@ -13,7 +13,7 @@ Filter tasks by status: All, Active, Completed
 
 Technologies Used
 
-Next Js
+- Next Js
 - React-Redux Toolkit
 - React Flip Move (for animating new tasks )
 - UUID ( for ensuring uniqueness of IDs)
