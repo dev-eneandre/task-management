@@ -14,11 +14,11 @@ Filter tasks by status: All, Active, Completed
 Technologies Used
 
 Next Js
-React-Redux Toolkit
-React Flip Move (for animating new tasks )
-UUID ( for ensuring uniqueness of IDs)
-Jest
-React Testing Library
+- React-Redux Toolkit
+- React Flip Move (for animating new tasks )
+- UUID ( for ensuring uniqueness of IDs)
+- Jest
+- React Testing Library
 
 Getting Started
 
