@@ -1,8 +1,10 @@
 
 Task Management App
+
 This NoteApp is a simple Next Js application for managing a to-do list. Users can add, update, delete, and filter tasks based on their status (active or completed).
 
 Features
+
 Add new tasks
 Delete tasks
 Update task status (mark as completed)
@@ -10,6 +12,7 @@ Edit existing tasks
 Filter tasks by status: All, Active, Completed
 
 Technologies Used
+
 Next Js
 React-Redux Toolkit
 React Flip Move (for animating new tasks )
@@ -18,6 +21,7 @@ Jest
 React Testing Library
 
 Getting Started
+
 Prerequisites
 - Ensure you have Node.js and npm installed.
 
