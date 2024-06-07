@@ -24,8 +24,10 @@ const NoteApp = () => {
   const notesList = useSelector(selectNotes);
   const [TempNoteList, setTempNoteList] = useState(notesList);
   const [AllActive, setAllActive] = useState(true);
+  const [ActiveNoteList, setActiveNoteList] = useState([]);
   const [ActiveActive, setActive] = useState(false);
   const [CompletedActive, setCompletedActive] = useState(false);
+  const [CompletedNoteList, setCompletedNoteList] = useState([]);
 
   useEffect(() => setTempNoteList(notesList), [notesList]);
 
@@ -92,7 +94,7 @@ const NoteApp = () => {
     setAllActive(false);
     setCompletedActive(false);
     setActive(true);
-    setTempNoteList(notesList.filter((note) => note.status === false));
+    setActiveNoteList(notesList.filter((note) => note.status === false));
   };
 
   const CompletedNotes = () => {
@@ -100,7 +102,7 @@ const NoteApp = () => {
     setAllActive(false);
     setActive(false);
 
-    setTempNoteList(notesList.filter((note) => note.status === true));
+    setCompletedNoteList(notesList.filter((note) => note.status === true));
   };
 
   const customEnterAnimation = {
@@ -143,16 +145,39 @@ const NoteApp = () => {
           typeName={null}
           enterAnimation={customEnterAnimation}
         >
-          {TempNoteList?.map((todo) => (
-            <Todo
-              key={todo.id}
-              todo={todo.todo}
-              selectedIndex={todo.id}
-              updateNoteStatus={() => updateNoteStatus(todo.id)}
-              updateTodo={() => updateTodo(todo.id)}
-              deleteTodo={() => deleteTodo(todo.id)}
-            />
-          ))}
+          {AllActive &&
+            TempNoteList?.map((todo) => (
+              <Todo
+                key={todo.id}
+                todo={todo.todo}
+                selectedIndex={todo.id}
+                updateNoteStatus={() => updateNoteStatus(todo.id)}
+                updateTodo={() => updateTodo(todo.id)}
+                deleteTodo={() => deleteTodo(todo.id)}
+              />
+            ))}
+          {ActiveActive &&
+            ActiveNoteList?.map((todo) => (
+              <Todo
+                key={todo.id}
+                todo={todo.todo}
+                selectedIndex={todo.id}
+                updateNoteStatus={() => updateNoteStatus(todo.id)}
+                updateTodo={() => updateTodo(todo.id)}
+                deleteTodo={() => deleteTodo(todo.id)}
+              />
+            ))}
+          {CompletedActive &&
+            CompletedNoteList?.map((todo) => (
+              <Todo
+                key={todo.id}
+                todo={todo.todo}
+                selectedIndex={todo.id}
+                updateNoteStatus={() => updateNoteStatus(todo.id)}
+                updateTodo={() => updateTodo(todo.id)}
+                deleteTodo={() => deleteTodo(todo.id)}
+              />
+            ))}
         </FlipMove>
       </div>
 

@@ -102,7 +102,7 @@ describe("NoteApp Component", () => {
     store = mockStore({
       notes: [
         { id: "unique-id-1", status: false, todo: "Active Task" },
-        { id: "unique-id-2", status: true, todo: "Completed Task" },
+        { id: "unique-id-2", status: false, todo: "Completed Task" },
       ],
     });
 
