@@ -6,7 +6,6 @@ import NoteApp from "./NoteApp";
 import {
   addNote,
   delNote,
-  updateANote,
   updateDispatchNoteStatus,
 } from "../../features/noteSlice";
 

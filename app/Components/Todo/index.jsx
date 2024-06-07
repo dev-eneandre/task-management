@@ -25,7 +25,7 @@ const Todos = forwardRef(
     return (
       <div
         ref={ref}
-        className="flex items-center justify-between space-x-2 my-3 border border-[#686464] w-1/2 p-3 rounded-md"
+        className="flex items-center justify-between space-x-2 my-3 border border-[#686464] md:w-1/2 w-full p-3 rounded-md"
       >
         <div className="flex space-x-3 items-center">
           <p onClick={() => checker()}>

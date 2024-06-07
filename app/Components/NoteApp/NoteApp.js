@@ -51,7 +51,7 @@ const NoteApp = () => {
       dispatch(delNote(index));
     }
   };
-
+  // Update todo with a popup
   const updateTodo = (id) => {
     const index = TempNoteList.findIndex((todo) => todo.id === id);
     if (index !== -1) {
@@ -124,7 +124,7 @@ const NoteApp = () => {
           <form className="p-2 w-full">
             <input
               placeholder="Write a task"
-              className="w-1/2 px-2 py-3 rounded-sm border-b border-gray-200 bg-transparent outline-none text-sm"
+              className="md:w-1/2 w-full px-2 py-3 rounded-sm border-b border-gray-200 bg-transparent outline-none text-sm"
               value={todo}
               onChange={(e) => setTodo(e.target.value)}
             />
@@ -139,7 +139,7 @@ const NoteApp = () => {
         </div>
 
         <FlipMove
-          className="p-5 bg-slate-100"
+          className=""
           typeName={null}
           enterAnimation={customEnterAnimation}
         >
